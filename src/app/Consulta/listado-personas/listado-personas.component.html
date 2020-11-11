@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Consulta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card style="margin-top: 40px; margin-bottom: 20px;">
+
+    <ion-card-header>
+      <ion-card-subtitle>Por cada persona que uso la app</ion-card-subtitle>
+      <ion-card-title>Pulsaciones Registradas</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+
+  <table class="table">
+    <thead>
+  
+      <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Sexo</th>
+        <th>pulsacion</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      
+      <tr *ngFor="let item of listadoPersona">
+        <td> {{item.nombre}}  </td>
+        <td> {{item.edad}} </td>
+        <td>  {{item.sexo}} </td>
+        <td> {{item.pulsacion}} </td>
+      </tr>
+      
+  
+    </tbody>
+  
+  </table>
+  
+</ion-content>
