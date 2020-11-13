@@ -12,9 +12,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CommonModule } from "@angular/common";
 import { FormsModule } from '@angular/forms';
 import { ListadoPersonasComponent } from './Consulta/listado-personas/listado-personas.component';
+import { ModificarPage} from './modificar/modificar.page';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent,ListadoPersonasComponent],
+  declarations: [AppComponent,ListadoPersonasComponent, ModificarPage],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { ListadoPersonasComponent } from './Consulta/listado-personas/listado-pe
     FormsModule,
     IonicModule.forRoot(),
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     StatusBar,

@@ -4,6 +4,7 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -14,29 +15,20 @@ export class AppComponent implements OnInit {
   public appPages = [
     {
       title: 'Inicio',
-      url: '/folder/Inicio',
+      url: '/index',
       icon: 'mail'
+    },
+    {
+      title: 'Registro De Pulsacion',
+      url: '/registro',
+      icon: 'heart'
     },
     {
       title: 'Listado Personas',
       url: '/listadoPersonas',
       icon: 'archive'
     },
-    {
-      title: 'Registro De Pulsacion',
-      url: '/folder/Registro',
-      icon: 'heart'
-    }/*,
-    {
-      title: 'Modificar Persona',
-      url: '',
-      icon: 'heart'
-    },
-    {
-      title: 'Eliminar Persona',
-      url: '',
-      icon: 'heart'
-    }*/
+    
   ];
 
 

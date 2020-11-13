@@ -34,7 +34,7 @@ export class PersonaService {
 
   getTask(id: string) {
     const path = `https://pulsacionapi.azurewebsites.net/api/Pulsaciones/${id}`;
-    return this.http.get<Task>(path);
+    return this.http.get<Persona>(path);
   }
 
   createTask(task: Task) {
@@ -42,9 +42,9 @@ export class PersonaService {
     return this.http.post(path, task);
   }
 
-  updateTask(task: Task) {
-    const path = `https://pulsacionapi.azurewebsites.net/api/Pulsaciones/${task.identificacion}`;
-    return this.http.put<Task>(path, task);
+  updateTask(persona: Persona) {
+    const path = `https://pulsacionapi.azurewebsites.net/api/Pulsaciones/${persona.identificacion}`;
+    return this.http.put<Persona>(path, persona);
   }
 
   deleteTask(id: string) {

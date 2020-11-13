@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Consulta</ion-title>
+    <ion-title>CONSULTAR</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -16,31 +16,21 @@
       <ion-card-title>Pulsaciones Registradas</ion-card-title>
     </ion-card-header>
   </ion-card>
+  <ion-list *ngFor="let persona of listadoPersona">
+    <button class="boton_personalizado"  routerLink='/modificar/{{persona.identificacion}}'icon-start>
+      <ion-icon [name]="'Nombre:-' + persona.nombre" item-start>      </ion-icon>
+      <p> Nombre: {{ persona.nombre }} | Edad {{ persona.edad }} | Pulsacion: {{ persona.pulsacion }} </p>
+      
+    </button>
+  </ion-list>
+
+  
+    <ion-infinite-scroll threshold="150px" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="crescent"
+        loadingText="Cargando...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 
 
-  <table class="table">
-    <thead>
-  
-      <tr>
-        <th>Nombre</th>
-        <th>Edad</th>
-        <th>Sexo</th>
-        <th>pulsacion</th>
-      </tr>
-    </thead>
-  
-    <tbody>
-      
-      <tr *ngFor="let item of listadoPersona">
-        <td> {{item.nombre}}  </td>
-        <td> {{item.edad}} </td>
-        <td>  {{item.sexo}} </td>
-        <td> {{item.pulsacion}} </td>
-      </tr>
-      
-  
-    </tbody>
-  
-  </table>
-  
 </ion-content>

@@ -30,11 +30,7 @@ export class FolderPage implements OnInit {
  
   add(formulario: NgForm){
     
-    this.personaService.createTask(this.persona).subscribe(p => {
-      if (p != null) {
-        alert('PERSONA REGISTRADA CORRECTAMENTE!');
-      }
-    });
+    this.personaService.createTask(this.persona).subscribe();
     
     
     this.clear(formulario);

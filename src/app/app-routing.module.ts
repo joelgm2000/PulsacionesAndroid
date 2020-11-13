@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { ListadoPersonasComponent } from './Consulta/listado-personas/listado-personas.component';
+import { ModificarPage } from './modificar/modificar.page';
 
 const routes: Routes = [
   {
@@ -13,20 +14,18 @@ const routes: Routes = [
     component: ListadoPersonasComponent
   },
   {
-    path: 'folder/:id',
+    path: 'modificar/:identificacion',
+    component: ModificarPage
+  },
+  {
+    path: 'registro',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
     path: 'index',
     loadChildren: () => import('./index/index.module').then( m => m.IndexPageModule)
-  },  {
-    path: 'modificar',
-    loadChildren: () => import('./modificar/modificar.module').then( m => m.ModificarPageModule)
   },
-  {
-    path: 'eliminar',
-    loadChildren: () => import('./eliminar/eliminar.module').then( m => m.EliminarPageModule)
-  },
+  
 
 
  

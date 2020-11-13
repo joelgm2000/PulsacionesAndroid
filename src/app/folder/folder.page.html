@@ -3,15 +3,16 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Registrar</ion-title>
+    <ion-title>REGISTRAR PERSONAS</ion-title>
   </ion-toolbar>
 </ion-header>
 <br>
 
-<div class="container">
+<ion-content [fullscreen]="true">
+
     <div class="row">
         <div class="col-md-6 offset-md-3">
-            <h2>Registro de Personas</h2>
+         
             <form #formulario="ngForm">
                                            
                 <div class="form-group">
@@ -49,11 +50,17 @@
 
 
                 <div class="text-center">
-                    <button class="btn btn-primary mr-1"(click)="add(formulario)">registrar</button>
+                    <button class="btn btn-primary mr-1"(click)="add(formulario)">Registrar</button>
                     <button class="btn btn-secondary" type="reset">Cancel</button>
                 </div>
             
             </form>
         </div>
     </div>
-</div>
+    <ion-card style="margin-top: 20px; margin-bottom: 20px;">
+
+      <ion-card-header>
+        <ion-card-subtitle>Registra tu pulsacion</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+</ion-content>
